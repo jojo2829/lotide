@@ -1,5 +1,5 @@
 // FUNCTION IMPLEMENTATION
-var _ = require('lodash');
+let _ = require('lodash');
 
 const assertEqual = function(actual, expected) {
 
