@@ -24,7 +24,6 @@ let eqArrays = function(arrayA,arrayB) {
   } else {
     return false;
   }
- 
 };
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]),true); // => true
