@@ -1,5 +1,5 @@
 // FUNCTION IMPLEMENTATION
-let _ = require('lodash');
+// let _ = require('lodash');
 
 const assertEqual = function(actual, expected) {
 
@@ -10,9 +10,10 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-let head = (array) => {
-  return _.head(array);
+const head = function(array) {
+  return array[0];
 };
+
 
 // TEST CODE
 assertEqual(head([5,6,7]), 5);
