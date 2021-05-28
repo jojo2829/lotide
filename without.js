@@ -1,3 +1,25 @@
+const eqArrays = function(arrayOne, arrayTwo) {
+  if (arrayOne.length !== arrayTwo.length) {
+    return false;
+  }
+  for (let i = 0; i < arrayOne.length; i++) {
+    if (arrayOne[i] !== arrayTwo[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+const assertArraysEqual = function(arrayA, arrayB) {
+
+  if (eqArrays(arrayA,arrayB)) {
+    console.log(`Assertion Passed: ${arrayA} === ${arrayB}`);
+
+  } else {
+    console.log(`Assertion Failed: ${arrayA} !== ${arrayB}`);
+  }
+};
+
 const without = function(source, itemsToRemove) {
   let newArray = [];
 
@@ -11,29 +33,6 @@ const without = function(source, itemsToRemove) {
     }
   }
   return newArray;
-};
-
-const assertArraysEqual = function(arrayA, arrayB) {
-
-  if (arrayA.length === arrayB.length) {
-    for (let i = 0; i < arrayA.length; i++) {
-      let itemA = arrayA[i];
-      for (let j = 0; j < arrayB.length; j++) {
-        let itemB = arrayB[j];
-        if (i === j) {
-          if (itemA !== itemB) {
-            console.log(`Assertion Failed: ${arrayA} !== ${arrayB}`);
-            return;
-          }
-        }
-      }
-    }
-    console.log(`Assertion Passed: ${arrayA} === ${arrayB}`);
-    return;
-  } else {
-    console.log(`Assertion Failed: ${arrayA} !== ${arrayB}`);
-    return;
-  }
 };
 
 console.log(without([1, 2, 3], [1]));
